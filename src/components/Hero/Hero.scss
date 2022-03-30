@@ -1,0 +1,23 @@
+@use "../../assets/layouts/layouts";
+
+.hero {
+  width: 100%;
+  
+  &_desktop{
+    width: 100%;
+    display: none;
+    
+    @include layouts.device-size(md){
+      display: block;
+    }
+  }
+
+  &_mobile{
+    width: 100%;
+    display: block;
+    
+    @include layouts.device-size(md){
+      display: none;
+    }
+  }
+}

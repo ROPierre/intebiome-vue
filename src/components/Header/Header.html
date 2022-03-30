@@ -1,0 +1,31 @@
+<header>
+  <div class="navbar">
+    <!-- Burger Menu -->
+    <button class="navbar_burger navbar_button" @click="showMenu = !showMenu">
+      <transition name="fade" mode="out-in">
+        <img
+          src="@/assets/img/ic.menu.svg"
+          alt="Abrir menu"
+          v-if="!showMenu"
+          :key="'showMenu'"
+        />
+        <img
+          src="@/assets/img/ic.close.svg"
+          alt="Abrir menu"
+          v-else
+          :key="'closeMenu'"
+        />
+      </transition>
+    </button>
+    <!-- Logo -->
+    <a href="#">
+      <img class="navbar_logo" src="@/assets/img/logo@2x.png" alt="Intibiome" />
+    </a>
+    <!-- Search -->
+    <div class="navbar_search navbar_button">
+      <img src="@/assets/img/ic.search.svg" alt="Pesquisar" />
+    </div>
+  </div>
+  <!-- Componente menu -->
+  <top-menu :showMenu="showMenu"></top-menu>
+</header>

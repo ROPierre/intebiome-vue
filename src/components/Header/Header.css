@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0px 4px 16px #00000014;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .navbar {
+    width: 100%;
+    padding: 6px 18px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+  }
+}
+.navbar_burger {
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .navbar_burger {
+    opacity: 0;
+  }
+}
+.navbar_logo {
+  max-width: 200px;
+}
+@media (min-width: 768px) {
+  .navbar_logo {
+    justify-self: flex-start;
+  }
+}
+.navbar_button {
+  padding: 12px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}/*# sourceMappingURL=Header.css.map */

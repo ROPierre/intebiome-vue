@@ -1,0 +1,11 @@
+<div class="product_card">
+    <img 
+        class="product_card_img"
+        :src="require(`@/assets/img/${filename}`)" 
+        :alt="`Product line ${button_text}`"
+    >
+    <p class="product_card_text">{{ text }}</p>
+    <a class="product_card_button" :href="button_link">
+        <button :style="{ backgroundColor: button_color }">{{ button_text }}</button>
+    </a>
+</div>

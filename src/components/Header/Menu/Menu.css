@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
+}
+
+.menu_mobile {
+  width: 100%;
+  height: calc(100vh - 97px);
+  padding-left: 1.125rem;
+  background-color: #389CD6;
+  position: absolute;
+  display: block;
+}
+@media (min-width: 768px) {
+  .menu_mobile {
+    display: none;
+  }
+}
+.menu_mobile div:first-child {
+  margin-top: 5vh;
+}
+.menu_mobile_link {
+  width: 100%;
+  list-style: none;
+}
+.menu_mobile_link a {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+@media (min-width: 768px) {
+  .menu_mobile_link a {
+    font-size: 1.25rem;
+  }
+}
+.menu_desktop_pages {
+  background-color: #389CD6;
+  font-size: 1rem !important;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .menu_desktop_pages {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .menu_desktop_pages {
+    display: none;
+  }
+}
+.menu_desktop_pages a {
+  font-size: 1rem !important;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+@media (min-width: 768px) {
+  .menu_desktop_pages a {
+    font-size: 1.25rem;
+  }
+}
+.menu_desktop_pages_link {
+  padding: 0.7rem 2.9rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu_desktop_pages_link img {
+  margin-left: 0.5rem;
+}
+.menu .submenu {
+  width: 100%;
+  padding-left: 10vw;
+  background-color: #9D8E8E;
+  position: absolute;
+}
+.menu .submenu_link {
+  padding: 1rem 1.25rem;
+  display: inline-block;
+  list-style-type: none;
+}
+.menu .submenu_link a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+  font-size: 1rem !important;
+}
+@media (min-width: 768px) {
+  .menu .submenu_link a {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=Menu.css.map */

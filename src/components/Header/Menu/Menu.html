@@ -1,0 +1,47 @@
+<nav class="navbar_menu menu">
+  <!-- mobile -->
+  <transition name="fade">
+    <ul class="menu_mobile" v-if="showMenu" :key="'lista'">
+      <div v-for="link in links" :key="link.category">
+        <li 
+          class="menu_mobile_link" 
+          v-for="submenu in link.submenu" 
+          :key="submenu.name"
+        >
+          <a href="#">{{ submenu.name }}</a>
+        </li>
+      </div>
+    </ul>
+  </transition>
+  <!-- desktop -->
+  <div class="menu_desktop" @mouseleave="isOpenSubmenu = !isOpenSubmenu">
+    <ul class="menu_desktop_pages">
+      <li 
+        class="menu_desktop_pages_link" 
+        v-for="menu in links" 
+        :key="menu.category"
+        @mouseover="getMenu(menu.category)"
+      >
+        <a v-if="menu.submenu.length == 0" :href="menu.link">{{ menu.category }}</a>
+        <span v-else>{{ menu.category }}</span>
+        <img
+          src="@/assets/img/ic.expand.svg"
+          alt="Expand menu"
+          v-if="menu.submenu.length > 0"
+        />
+      </li>
+    </ul>
+    <!-- submenu -->
+    <transition name="fade">
+      <ul class="menu_desktop_submenu submenu" v-show="isOpenSubmenu">
+          <li 
+            class="submenu_link" 
+            v-for="submenu in submenus" 
+            :key="submenu.name"
+          >
+            <a :href="submenu.link">{{ submenu.name }}</a>
+          </li>
+      </ul>
+    </transition>
+  </div>
+</nav>

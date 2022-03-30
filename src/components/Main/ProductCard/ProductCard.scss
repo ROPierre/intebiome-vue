@@ -1,0 +1,35 @@
+@use "../../../assets/layouts/layouts";
+
+.product_card{
+    max-width: 356px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 16px #00000014;
+    border-radius: 16px;
+
+    @include layouts.flex(center, center);
+    flex-direction: column;
+
+    &_text{
+        padding: 1.5rem 2rem 2rem;
+        color: #7B7070;
+        font-size: 1.25rem;
+        text-align: center;
+        letter-spacing: .4px;
+        line-height: 28px;
+    }
+
+    &_button{
+        width: 100%;
+        button{
+            width: 100%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border: none;
+            border-radius: 0px 0px 16px 16px;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}

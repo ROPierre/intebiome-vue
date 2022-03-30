@@ -1,0 +1,71 @@
+// Variables
+$primary: #389CD6;
+$neutral: #7B7070;
+
+$text-color: $neutral;
+$text-mobile-size: 1rem;
+$text-default-size: 1.25rem;
+
+$title-color: $primary;
+$title-default-size:  2.4375rem;
+$title-mobile-size:  1.9375rem;
+$title-weight: bold; 
+
+// Flex Mixin
+@mixin flex($jst, $alg){
+    display: flex;
+    justify-content: $jst;
+    align-items: $alg;
+};
+
+// Grid System Mixin
+@mixin device-size($device){
+    @if $device == xs{
+        @media (max-width: 575px){ @content }
+    } @else if $device == sm{
+        @media (max-width: 767px){ @content }
+    } @else if $device == md{
+        @media (min-width: 768px) { @content }
+    } @else if $device == lg{
+        @media (min-width: 992px) { @content }
+    } @else if $device == xl{
+        @media (min-width: 1200px) { @content }
+    }
+};
+
+// Font Mixins
+@mixin paragraph{
+    color: $text-color;
+    font-size: $text-mobile-size;
+    font-weight: normal;
+    line-height: 22px;
+    letter-spacing: 0.32px;
+    
+    @include device-size(md){
+        font-size: $text-default-size;
+    }
+}
+
+@mixin title{
+    color: $title-color;
+    font-size: $title-mobile-size;
+    font-weight: $title-weight;
+    letter-spacing: .62px;
+
+    @include device-size(md){
+        font-size: $title-default-size;
+    }
+}
+
+@mixin menu_links{
+    color: #fff;
+    font-size: $text-mobile-size;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 22px;
+    letter-spacing: 0.32px;
+    
+    @include device-size(md){
+        font-size: $text-default-size;
+    }
+}

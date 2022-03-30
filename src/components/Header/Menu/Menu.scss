@@ -1,0 +1,77 @@
+@use "../../../assets/layouts/layouts";
+
+.menu{
+    &_mobile{
+        width: 100%;
+        height: calc(100vh - 97px);
+        padding-left: 1.125rem;
+        background-color: layouts.$primary;
+        position: absolute;
+
+        display: block;
+        @include layouts.device-size(md){
+            display: none;
+        }
+
+        div:first-child{
+            margin-top: 5vh;
+        }
+
+        &_link{
+            width: 100%;
+            list-style: none;
+            a{
+                display: block;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1.25rem;
+                width: 100%;
+                @include layouts.menu_links
+            }
+        }
+    }
+
+    &_desktop_pages{
+        background-color: layouts.$primary;
+
+        font-size: 1rem !important;
+        @include layouts.menu_links;
+        @include layouts.flex(center, center);
+
+        @include layouts.device-size(sm){
+            display: none;
+        }
+
+        a{
+            font-size: 1rem !important;
+            @include layouts.menu_links;
+        }
+
+        &_link{
+            padding: .7rem 2.9rem;
+            list-style-type: none;
+            @include layouts.flex(center, center);
+            cursor: pointer;
+
+            img{
+                margin-left: .5rem;
+            }
+        }
+    }
+    .submenu{
+        width: 100%;
+        padding-left: 10vw;
+        background-color: #9D8E8E;
+        position: absolute;
+        
+        &_link{
+            padding: 1rem 1.25rem; 
+            display: inline-block;    
+            list-style-type: none;
+            a{
+                @include layouts.menu_links;
+                font-size: 1rem !important;
+            }
+        }
+    }
+}

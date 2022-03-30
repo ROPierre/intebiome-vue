@@ -1,0 +1,91 @@
+@use "../../assets/layouts/layouts";
+
+.footer {
+  margin-top: 1.25rem;
+  padding: 2rem 0px;
+  background-color: layouts.$primary;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+
+  @include layouts.flex(center, center);
+  flex-direction: column;
+
+  @include layouts.device-size(md) {
+    padding-top: 4rem;
+    display: block;
+  }
+
+  &_menu_link {
+    padding: 1rem;
+    list-style-type: none;
+
+    @include layouts.device-size(md) {
+      padding: 1rem 1.5rem;
+      display: inline-block;
+    }
+
+    &:not(:last-of-type)::after {
+      content: "";
+      width: 2px;
+      height: 24px;
+      margin-left: 1.5rem;
+      margin-top: 0.8rem;
+      background-color: #fff;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+    }
+
+    @include layouts.device-size(sm) {
+      &:not(:last-of-type)::after {
+        content: "";
+        width: 24px;
+        height: 2px;
+        margin-top: 1rem;
+        margin-left: 0;
+        left: 50%;
+        display: block;
+      }
+    }
+
+    a {
+      @include layouts.menu_links;
+    }
+  }
+
+  &_social {
+    padding-top: 3rem;
+
+    @include layouts.flex(center, center);
+    flex-direction: column-reverse;
+
+    @include layouts.device-size(md) {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  }
+  .social {
+    a {
+      display: block;
+
+      @include layouts.device-size(md) {
+        display: inline-block;
+      }
+    }
+
+    &_instagram {
+      margin-bottom: 5rem;
+      @include layouts.device-size(md) {
+        margin-bottom: 0;
+      }
+    }
+    &_ulabs {
+      img {
+        width: 55%;
+      }
+    }
+  }
+}

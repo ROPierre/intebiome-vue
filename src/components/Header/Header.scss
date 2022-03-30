@@ -1,0 +1,51 @@
+@use "../../assets/layouts/layouts";
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0px 4px 16px #00000014;
+  
+  @include layouts.flex(space-evenly, center);
+  flex-wrap: wrap;
+  
+  @include layouts.device-size(sm){
+    width: 100%;
+    padding: 6px 18px;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+  }
+
+  &_burger {
+    border: none;
+    background-color: transparent;
+
+    @include layouts.device-size(md) {
+      opacity: 0;
+    }
+  }
+
+  &_logo {
+    max-width: 200px;
+
+    @include layouts.device-size(md){
+      justify-self: flex-start;
+    }
+    
+  }
+
+  &_button{
+    padding: 12px;
+  }
+}
+
+// Transition
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

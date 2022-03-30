@@ -1,0 +1,167 @@
+@use "../../assets/layouts/layouts";
+
+.main {
+  
+  @include layouts.flex(center, center);
+  flex-direction: column;
+  
+  @include layouts.device-size(sm){
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+  
+  section {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+
+    @include layouts.device-size(md) {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &:first-of-type {
+      margin-top: 2.5rem;
+      @include layouts.device-size(md) {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  .title {
+    @include layouts.title;
+    padding-bottom: 2rem;
+    @include layouts.device-size(md) {
+      padding-bottom: 2.5rem;
+    }
+    text-align: center;
+  }
+
+  .text {
+    @include layouts.paragraph;
+  }
+
+  &_textbox {
+    text-align: center;
+
+    @include layouts.device-size(md) {
+      max-width: 550px;
+    }
+  }
+
+  .textbox {
+    &-lg {
+      @include layouts.device-size(md) {
+        max-width: 744px;
+      }
+    }
+
+    &_text {
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  &_icons {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+    &_img {
+      width: 100%;
+      @include layouts.device-size(md) {
+        max-width: 70%;
+      }
+      @include layouts.device-size(xl) {
+        max-width: 45%;
+      }
+    }
+  }
+
+  .products{
+    &_cards{
+      display: flex;
+      overflow-x: auto;
+
+      .product-card{
+        margin-right: 15px
+      }
+      
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  &_banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include layouts.device-size(sm){
+      width: 100vw;
+    }
+
+    .banner_desktop {
+      width: 100%;
+      display: none;
+      @include layouts.device-size(md) {
+        display: block;
+      }
+    }
+
+    .banner_mobile {
+      width: 100%;
+      display: block;
+      @include layouts.device-size(md) {
+        display: none;
+      }
+    }
+  }
+
+  &_blog {
+    text-align: center;
+  }
+  .blog {
+    &_cards{
+      padding-bottom: 1rem;
+      display: flex;
+      overflow-x: auto;
+
+      .blog-card{
+        margin-right: 15px
+      }
+      
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+
+    &_button {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 20px;
+      border-radius: 16px;
+      background-color: #389cd6;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      font-size: 1.25rem;
+      text-decoration: none;
+      display: inline-block;
+
+      @include layouts.device-size(md) {
+        width: 356px;
+      }
+    }
+  }
+}
+
+.no-padding {
+  padding-bottom: 0px !important;
+}
+
+.slide{
+  padding-bottom: 1rem;
+  max-width: 100%;
+}
