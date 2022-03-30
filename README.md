@@ -16,11 +16,11 @@ Projeto avaliativo;
 
 ## Estrutura de arquivos das pastas de componentes
 Cada componente foi dividido da seguinte forma:
-1. NomeComponente.html: em que terá a estrutura html do componente;
-2. NomeComponente.scss: em que terá o estilo referente ao componente;
-3. NomeComponente.css: arquivo processado do SCSS;
-4. NomeComponente.css.map: arquivo de configuração do processamento do SCSS;
-5. NomeComponente.vue: arquivo Vue que referenciará aos de HTML (template) e CSS (estilo) mantendo apenas as funções, estados, variáveis, propriedades e comportamentos utilizadas por cada um dos componentes;  
+* NomeComponente.html: em que terá a estrutura html do componente;
+* NomeComponente.scss: em que terá o estilo referente ao componente;
+* NomeComponente.css: arquivo processado do SCSS;
+* NomeComponente.css.map: arquivo de configuração do processamento do SCSS;
+* NomeComponente.vue: arquivo Vue que referenciará aos de HTML (template) e CSS (estilo) mantendo apenas as funções, estados, variáveis, propriedades e comportamentos utilizadas por cada um dos componentes;  
 
 ## Execução em máquina local
 1. Baixar o código do github;
