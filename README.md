@@ -27,4 +27,6 @@ Cada componente foi dividido da seguinte forma:
 2. Executar o comando "npm --install" em seu terminal para instalar todas as dependências necessárias;
 3. Ao fim da instalação, executar o comando "npm run serve" em seu terminal para executar o projeto;
 4. Por fim, acessar o link de acesso fornecido no prompt de comando em seu navegador de preferência (Ex.: localhost:8080);
-Obs: É necessário ter o NodeJS instalado na máquina
+* Obs: É necessário ter o NodeJS instalado na máquina
+* Para visualização também pode acessar via: https://ropierre.github.io/intebiome-vue/
+
